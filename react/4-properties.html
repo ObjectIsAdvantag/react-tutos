@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!-- https://www.kirupa.com/react/components.htm -->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Component Properties</title>
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+
+</head>
+
+<body>
+
+    <div id="container"></div>
+
+    <script type="text/babel">
+        class MyComponent extends React.Component {
+            render() {
+                return <p>{this.props.message}</p>
+             }
+        }
+
+        var destination = document.querySelector("#container");
+        ReactDOM.render(
+            <h1>
+              <MyComponent message="Cisco DevNet"/>
+            </h1>,
+            destination
+          );  
+        
+    </script>
+</body>
+
+</html>
