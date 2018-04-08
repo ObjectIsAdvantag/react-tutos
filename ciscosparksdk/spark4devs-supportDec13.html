@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<!-- https://www.kirupa.com/react/building_your_first_react_app.htm -->
 <html>
 
 <head>
     <meta charset="utf-8">
-    <title>Render at a DOM specific node</title>
+    <title>React! React! React!</title>
     <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
-    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+    <script src="bundle-1.21.1.js"></script>
 
     <style>
         #container {
@@ -34,6 +34,19 @@
             destination
         );
     </script>
+
+    <script>
+        var CiscoSpark = ciscospark;
+        var spark = CiscoSpark.init({
+            credentials: {
+                authorization: "user-token"
+            }
+        });
+
+        spark.phone.register();
+        spark.phone.dial("roomkit@sparkdemoes.com");
+    </script>
+
 </body>
 
 </html>
