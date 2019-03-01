@@ -7,8 +7,10 @@
     <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+    
     <script src="bundle-1.21.1.js"></script>
-
+    <!-- <script src="https://gitcdn.xyz/cdn/webex/spark-js-sdk/7a80c9c3578ba2e20983bd37a1f8ca8561093d7d/packages/node_modules/ciscospark/umd/ciscospark.min.js"></script> -->
+    
     <style>
         #container {
             padding: 50px;
@@ -40,7 +42,7 @@
         var spark = CiscoSpark.init({
             config: {
                 credentials: {
-                    authorizationString: "https://api.ciscospark.com/v1/authorize?client_id=Ca64bb4bcd5e338247a8bd8022a4ac42eb185a5e5c725451d39a104033b958eda&response_type=code&redirect_uri=http%3A%2F%2Flocalhost%3A4321%2Fciscosparksdk.html&scope=spark%3Aall&state=DevNet"
+                    authorizationString: "https://api.ciscospark.com/v1/authorize?client_id=C65374fb685973d75e146eaaa4ba84982022c2ea911b173e58b64df24082e330b&response_type=code&redirect_uri=http%3A%2F%2Flocalhost%3A4321%2Fciscosparksdk.html&scope=spark%3Aall&state=DevNet"
                 }
             }
         });
@@ -48,7 +50,7 @@
             if (spark.canAuthorize) {
                 // your app logic goes here
                 console.log("made it")
-                Cis
+
             }
             else {
                 spark.authorization.initiateLogin()
